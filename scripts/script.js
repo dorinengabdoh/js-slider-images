@@ -1,4 +1,4 @@
-// eslint no-return-assign
+// Dom
 const cover = document.querySelector('.cover')
 const slider = document.querySelector('.slider')
 const arrowBtns = document.querySelectorAll('.slider i')
@@ -29,7 +29,7 @@ arrowBtns.forEach(btn => {
 const autoplay = () => {
   if (window.innerWidth < 800) return
   // autoplay in 2500ms
-  timeoutId = setTimeout(() => cover.scrollLeft += firstCardWidth, 2000)
+  timeoutId = setTimeout(() => cover.scrollLeft += firstCardWidth, 2000) //eslint-disable-line
 }
 autoplay()
 

@@ -14,6 +14,11 @@ body {
   overflow: hidden;
 }
 
+.container {
+  margin: 0 auto;
+  overflow: hidden;
+}
+
 .card {
   height: 140px;
   object-fit: cover;
@@ -103,11 +108,15 @@ h1 {
 @media screen and (max-width: 900px) {
   .slider .cover {
     grid-auto-columns: calc((100% / 2) - 9px);
+    overflow: hidden;
+    margin: 0 auto;
   }
 }
 
 @media screen and (max-width: 600px) {
   .slider .cover {
     grid-auto-columns: 100%;
+    overflow: hidden;
+    margin: 0 auto;
   }
 }
