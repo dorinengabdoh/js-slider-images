@@ -1,4 +1,4 @@
-// eslint no-return-assign
+// Dom
 const cover = document.querySelector('.cover')
 const slider = document.querySelector('.slider')
 const arrowBtns = document.querySelectorAll('.slider i')
@@ -16,7 +16,7 @@ coverChilds.slice(-cardperView).reverse().forEach(card => {
 // insert copie of last card to the bigining of cover
 coverChilds.slice(0, cardperView).forEach(card => {
   cover.insertAdjacentHTML('beforeend', card.outerHTML)
-});
+})
 
 // add event list for arrowBtns
 arrowBtns.forEach(btn => {
@@ -29,7 +29,7 @@ arrowBtns.forEach(btn => {
 const autoplay = () => {
   if (window.innerWidth < 800) return
   // autoplay in 2500ms
-  timeoutId = setTimeout(() => cover.scrollLeft += firstCardWidth, 2000)
+  timeoutId = setTimeout(() => cover.scrollLeft += firstCardWidth, 2000) //eslint-disable-line
 }
 autoplay()
 
@@ -68,4 +68,3 @@ document.addEventListener('mouseup', dragStop)
 cover.addEventListener('scroll', infiniteScroll)
 slider.addEventListener('mouseenter', () => clearTimeout(timeoutId))
 slider.addEventListener('mouseleave', autoplay)
-
