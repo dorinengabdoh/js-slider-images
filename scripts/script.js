@@ -16,7 +16,7 @@ coverChilds.slice(-cardperView).reverse().forEach(card => {
 // insert copie of last card to the bigining of cover
 coverChilds.slice(0, cardperView).forEach(card => {
   cover.insertAdjacentHTML('beforeend', card.outerHTML)
-})
+});
 
 // add event list for arrowBtns
 arrowBtns.forEach(btn => {
@@ -68,3 +68,4 @@ document.addEventListener('mouseup', dragStop)
 cover.addEventListener('scroll', infiniteScroll)
 slider.addEventListener('mouseenter', () => clearTimeout(timeoutId))
 slider.addEventListener('mouseleave', autoplay)
+
